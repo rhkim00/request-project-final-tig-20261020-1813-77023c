@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "id": "77023c56-1f56-4f4e-8e12-b8e323872ce8",
+  "repository": "yeezyuchan/request-project-final-tig-20261020-1813-77023c",
+  "sourceCommit": "824cafb6c58f801e70fe7074e69856bf27113da7",
+  "request": {
+    "title": "Final CLI verification: fix reversed parity",
+    "requestCategory": "bug",
+    "scope": "Fix only src/is-even.js so isEven(n) returns true for even integers and false for odd integers. Keep the export and the tests unchanged.",
+    "acceptanceChecks": [
+      "isEven(2) and isEven(0) return true; isEven(3) returns false.",
+      "node --test test.mjs passes with no dependencies."
+    ],
+    "aiRequirement": {
+      "provider": "claude",
+      "model": "claude-haiku-5-5",
+      "effort": "low",
+      "source": "declared"
+    },
+    "rewardTig": "0",
+    "rewardMultiplier": "1",
+    "executionDeadlineAt": "2026-10-20T19:06:05.862240Z",
+    "originalRequest": "Fix the reversed even-number condition in src/is-even.js. This is a tiny public CLI release verification fixture.",
+    "context": "The four-file fixture deliberately has the parity condition reversed.",
+    "completedWork": "The project and regression test are prepared. The baseline test fails.",
+    "constraints": [
+      "Change only src/is-even.js. Do not change test.mjs or package.json.",
+      "Use file-editing tools only. Report runtime checks as not_run when unavailable."
+    ],
+    "setupSteps": [
+      "Node.js 24; no package dependencies."
+    ],
+    "testSteps": [
+      "node --test test.mjs"
+    ]
+  },
+  "layout": "tree"
+}
